@@ -1,0 +1,11 @@
+
+Crie um arquivo ts que possua 5 funcoes descritas baixo
+1-> uma funcao que salva um objeto planet com as seguintes propriedade:
+nome: inserido pelo usuario 
+coordenadas: inserido pelo usuario salvo como uma tupla de quatro elementos  numericos
+situação: inserido pelo usuario salvo como uma string que pode ser "habitado" , "habitavel", "inavitavel" , ""inexplorado.
+satelites: uma lista com os seus nomes 
+2-> Uma funcao que atualizar a situação de um determinado planeta
+3-> Uma funcao que adicionar um satelite a um determinado planeta
+4-> Uma funcao que remove um satelite de um determinado planeta
+5-> uma funcao que lista os planetas salvos e todas as suas informações
