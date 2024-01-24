@@ -1,27 +1,47 @@
-let literal : "Hello,Word!!!" // Declarando o proprio tipo 
-let pi: 3.14159 
+type PlanetSituation = "habitado" | "habitavel"| "inavitavel" | "Inexplorado" 
 
-literal= "Hi, Word!!!" //Type '"Hi, Word!!!"' is not assignable to type '"Hello,Word!!!"'
+type PlanetCoordinates = [number, number,number,number]
 
-let option : 'Yes' | 'No' // Posso ter esses valores como opções
-
-type Planet =  'Mercurio' | "Venus" | "Terra" // Criando o nosso proprio tipo
-
-let planet : Planet
-
-if(planet === 'Terra'){
-    console.log("Estamos na Terra")
+type Planet = {
+    name:string,
+    coordinates : PlanetCoordinates,
+    situation : PlanetSituation,
+    satelites : string[]
 }
 
-function checkPlanet(planet:Planet){
-    if(planet === 'Terra'){
-        console.log("Estamos na Terra")
-    }
+const planets : Planet[] = []
+
+function addPlanet (name : string , coordinates : PlanetCoordinates , situation : PlanetSituation){
+    planets.push({
+        name,
+        coordinates,
+        situation,
+        satelites:[]
+    })
+    alert(`O Planeta ${name} foi registrado com sucesso`)
 }
 
-type GreetingCallback = (name : string) => void 
+function findPlanet(name:string){
+    const planet = planets.find((planet) => planet.name === name)
 
-function greet(callbackfn:GreetingCallback){ // Declarando tipo de funcao
-  let name = "magno"
-  callbackfn(name)
+    return planet ?? false
+}
+
+function updateSituation(situation : PlanetSituation ,planet : Planet){
+    planet.situation = situation
+
+    alert(`A situação do planeta ${planet.name} foi atualizada para ${situation}`)
+
+}
+
+function addSatelite(name:string , planet:Planet){
+    planet.satelites.push(name)
+
+    alert(`O satelite ${name} foi adicionado ao planeta ${planet.name}`)
+}
+
+function removeSatelite(name:string , planet:Planet){
+    planet.satelites = planet.satelites.filter((satelite) => satelite !==name)
+    
+    alert(`O satelite ${name} foi removido do planeta ${planet.name}`)
 }
