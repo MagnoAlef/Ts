@@ -1,0 +1,7 @@
+Crie uma arquivo Ts com as funcoes listadas abaixo . Utlize interfaces para tipar as respostas das requisições
+1-> Uma funcao que recebe um nome de usuario do GITHUB e realizar uma requisicao GET para obeter os dados 
+dele atraves da API publica do GITHUB
+2-> Uma funcao que mostra as informaçoes salvas de um determinado usuario e alguns de seus repositorios publicos
+3-> Uma funcao que mostra todos os usuarios salvos
+4-> Uma funcao que calcula a soma de repositorios dos usuarios salvos na lista e mostre o resultado
+5-> Uma funcao que mostre o top cinco de usuarios com maior numero de repositorios publicos (nome e quantidade)
