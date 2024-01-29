@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch":"tsc" ,
+    "watch": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/lodash": "^4.14.202",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }
